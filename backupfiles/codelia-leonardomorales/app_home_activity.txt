@@ -1,0 +1,59 @@
+app_home_activity.xmlm
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggplant_light"
+    tools:context=".ui.view.AppHomeActivity"
+    tools:ignore="SpeakableTextPresentCheck"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_home_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:headerLayout="@layout/app_home_nav_header"
+        app:menu="@menu/app_home_drawer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivAppHomeHead"
+            android:layout_width="237dp"
+            android:layout_height="223dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginBottom="254dp"
+            android:src="@drawable/brain_head"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/head_and_brain" />
+
+        <ImageView
+            android:id="@+id/ivAppHomePills"
+            android:layout_width="167dp"
+            android:layout_height="167dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="160dp"
+            android:contentDescription="@string/pills"
+            android:src="@drawable/pills"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAppHomeHead"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

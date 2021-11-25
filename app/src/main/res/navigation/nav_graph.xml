@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_appHomeFragment"
+            app:destination="@id/appHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appHomeFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.apphome.AppHomeFragment"
+        android:label="fragment_app_home"
+        tools:layout="@layout/fragment_app_home" >
+        <action
+            android:id="@+id/action_appHomeFragment_to_codeLectorFragment"
+            app:destination="@id/codeLectorFragment" />
+        <action
+            android:id="@+id/action_appHomeFragment_to_myPharmaHomeFragment"
+            app:destination="@id/myPharmaHomeFragment" />
+        <action
+            android:id="@+id/action_appHomeFragment_to_searcherCimavFragment"
+            app:destination="@id/searcherCimavFragment" />
+        <action
+            android:id="@+id/action_appHomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/codeLectorFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.codelector.CodeLectorFragment"
+        android:label="fragment_code_lector"
+        tools:layout="@layout/fragment_code_lector" >
+        <action
+            android:id="@+id/action_codeLectorFragment_to_appHomeFragment"
+            app:destination="@id/appHomeFragment" />
+        <action
+            android:id="@+id/action_codeLectorFragment_to_pharmaLectorHtmlFragment"
+            app:destination="@id/pharmaLectorHtmlFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myPharmaHomeFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.mypharmahome.MyPharmaHomeFragment"
+        android:label="fragment_my_pharma_home"
+        tools:layout="@layout/fragment_my_pharma_home" >
+        <action
+            android:id="@+id/action_myPharmaHomeFragment_to_appHomeFragment"
+            app:destination="@id/appHomeFragment" />
+        <action
+            android:id="@+id/action_myPharmaHomeFragment_to_introMyPharmaFragment"
+            app:destination="@id/introMyPharmaFragment" />
+        <action
+            android:id="@+id/action_myPharmaHomeFragment_to_infoMyListPharmaFragment"
+            app:destination="@id/infoMyListPharmaFragment" />
+        <action
+            android:id="@+id/action_myPharmaHomeFragment_to_searcherMyPharmaFragment"
+            app:destination="@id/searcherMyPharmaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/introMyPharmaFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.mypharmaintro.MyPharmaIntroFragment"
+        android:label="fragment_intro_my_pharma"
+        tools:layout="@layout/fragment_my_pharma_intro" >
+        <action
+            android:id="@+id/action_introMyPharmaFragment_to_myPharmaHomeFragment"
+            app:destination="@id/myPharmaHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoMyListPharmaFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.mypharmalistinfo.MyPharmaListInfoFragment"
+        android:label="fragment_info_my_list_pharma"
+        tools:layout="@layout/fragment_my_pharma_list_info" >
+        <action
+            android:id="@+id/action_infoMyListPharmaFragment_to_myPharmaHomeFragment"
+            app:destination="@id/myPharmaHomeFragment" />
+        <action
+            android:id="@+id/action_infoMyListPharmaFragment_to_infoMyPharmaFragment"
+            app:destination="@id/infoMyPharmaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searcherMyPharmaFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.mypharmasearcher.MyPharmaSearcherFragment"
+        android:label="fragment_searcher_my_pharma"
+        tools:layout="@layout/fragment_my_pharma_searcher" >
+        <action
+            android:id="@+id/action_searcherMyPharmaFragment_to_myPharmaHomeFragment"
+            app:destination="@id/myPharmaHomeFragment" />
+        <action
+            android:id="@+id/action_searcherMyPharmaFragment_to_infoMyPharmaFragment"
+            app:destination="@id/infoMyPharmaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoMyPharmaFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.mypharmainfo.MyPharmaInfoFragment"
+        android:label="fragment_info_my_pharma"
+        tools:layout="@layout/fragment_my_pharma_info" >
+        <action
+            android:id="@+id/action_infoMyPharmaFragment_to_searcherMyPharmaFragment"
+            app:destination="@id/searcherMyPharmaFragment" />
+        <action
+            android:id="@+id/action_infoMyPharmaFragment_to_infoMyListPharmaFragment"
+            app:destination="@id/infoMyListPharmaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searcherCimavFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.cimavsearcher.CimavSearcherFragment"
+        android:label="fragment_searcher_cimav"
+        tools:layout="@layout/fragment_cimav_searcher" >
+        <action
+            android:id="@+id/action_searcherCimavFragment_to_appHomeFragment"
+            app:destination="@id/appHomeFragment" />
+        <action
+            android:id="@+id/action_searcherCimavFragment_to_pharmaCimavHtmlFragment"
+            app:destination="@id/pharmaCimavHtmlFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pharmaLectorHtmlFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.lectorpharmahtml.LectorPharmaHtmlFragment"
+        android:label="fragment_pharma_lector_html"
+        tools:layout="@layout/fragment_lector_pharma_html" >
+        <action
+            android:id="@+id/action_pharmaLectorHtmlFragment_to_codeLectorFragment"
+            app:destination="@id/codeLectorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pharmaCimavHtmlFragment"
+        android:name="com.juandomingo.mypharmamemory.ui.view.cimavpharmahtml.CimavPharmaHtmlFragment"
+        android:label="fragment_pharma_cimav_html"
+        tools:layout="@layout/fragment_cimav_pharma_html" >
+        <action
+            android:id="@+id/action_pharmaCimavHtmlFragment_to_searcherCimavFragment"
+            app:destination="@id/searcherCimavFragment" />
+    </fragment>
+
+</navigation>

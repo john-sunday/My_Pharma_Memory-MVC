@@ -1,0 +1,21 @@
+    private var _binding: FragmentMyPharmaSearcherBinding? = null
+    private val binding get() = _binding!!
+
+    companion object {
+        fun newInstance() = MyPharmaSearcherFragment()
+    }
+    private lateinit var searcherViewModel: MyPharmaSearcherViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentMyPharmaSearcherBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        searcherViewModel = ViewModelProvider(this).get(MyPharmaSearcherViewModel::class.java)
+        // TODO: Use the ViewModel
+    }

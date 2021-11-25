@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- theme creation - 1º step >> create this file -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/pastel_green"/>
+    <item>
+        <bitmap
+            android:src="@drawable/spain_pill"
+            android:gravity="center" />
+    </item>
+</layer-list>

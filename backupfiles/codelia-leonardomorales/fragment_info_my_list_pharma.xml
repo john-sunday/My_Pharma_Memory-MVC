@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggplant_light"
+    android:orientation="vertical"
+    tools:context=".ui.view.infomylistpharma.InfoMyListPharmaFragment">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"/>
+
+    <TextView
+        android:id="@+id/tv_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bittersweet"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/mi_lista"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvlist_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_40dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:paddingTop="@dimen/_8dp" />
+
+</LinearLayout>

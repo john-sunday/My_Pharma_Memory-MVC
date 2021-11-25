@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navHeader"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/bittersweet"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:gravity="bottom"
+    android:padding="@dimen/_16dp"
+    tools:context=".ui.view.AppHomeActivity"
+    android:theme="@style/Theme.MyPharmaMemory2">
+
+    <ImageView
+        android:id="@+id/ivNavHeader"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/pills3"
+        android:contentDescription="@string/bottle_and_pills" />
+
+    <TextView
+        android:id="@+id/tvNavHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16dp"
+        android:text="@string/eliga_una_opcion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+</LinearLayout>

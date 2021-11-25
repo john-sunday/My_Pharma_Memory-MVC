@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/eggplant_light"
+    tools:context=".ui.view.intromypharma.IntroMyPharmaFragment">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp" />
+
+    <TextView
+        android:id="@+id/tv_intro_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bittersweet"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/mi_intro_farmaco"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp" />
+
+    <EditText
+        android:id="@+id/et_intro_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Nombre completo del medicamento"
+        android:background="@color/bittersweet"
+        android:hint="@string/nombre_completo_del_medicamento"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:text="@string/nombre_completo"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
+
+    <EditText
+        android:id="@+id/et_intro_nat_cod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Código nacional de 6 dígitos"
+        android:background="@color/bittersweet"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:text="@string/codigo_nacional"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
+
+    <EditText
+        android:id="@+id/et_intro_expiry_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Fecha de caducidad"
+        android:background="@color/bittersweet"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:text="@string/fecha_de_caducidad"
+        android:textColorHint="#000000" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
+
+    <EditText
+        android:id="@+id/et_intro_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Forma de administración"
+        android:background="@color/bittersweet"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:text="@string/via_administracion"
+        android:textColorHint="#000000" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
+
+    <EditText
+        android:id="@+id/et_intro_ailments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Dolencias que trata el fármaco"
+        android:background="@color/bittersweet"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:text="@string/dolencias_que_trata"
+        android:textColorHint="#000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_intro_ailments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/_40dp"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingEnd="@dimen/_0dp" />
+
+</LinearLayout>

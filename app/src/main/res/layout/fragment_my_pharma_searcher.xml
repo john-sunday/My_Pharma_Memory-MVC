@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/eggplant_light"
+    tools:context=".ui.view.mypharmasearcher.MyPharmaSearcherFragment">
+
+
+    <TextView
+        android:id="@+id/tv_mysearcher_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bittersweet"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/mi_busca_farmaco"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etml_mysearcher_pharma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:autofillHints="Medicamento para buscar"
+        android:background="@color/bittersweet"
+        android:ems="10"
+        android:gravity="start|top"
+
+        android:hint="@string/farmaco_a_buscar"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:textColorHint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mysearcher_title" />
+
+    <ImageView
+        android:id="@+id/iv_mysearcher_magnifying_glass"
+        android:layout_width="209dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/magnifying_glass"
+        android:src="@drawable/magnifying_glass_red_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etml_mysearcher_pharma" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

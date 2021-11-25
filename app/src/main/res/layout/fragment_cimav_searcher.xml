@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bittersweet"
+    tools:context=".ui.view.cimavsearcher.CimavSearcherFragment">
+
+
+    <TextView
+        android:id="@+id/tv_cimav_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/eggplant_light"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/busca_farmaco_cimav"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etml_cimav_pharma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:autofillHints="Fármaco a buscar"
+        android:background="@color/eggplant_light"
+        android:ems="10"
+
+        android:gravity="start|top"
+        android:hint="@string/farmaco_a_buscar"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/_0dp"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cimav_title" />
+
+    <ImageView
+        android:id="@+id/iv_cimav_magnifying_glass"
+        android:layout_width="209dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/magnifying_glass_image"
+        android:src="@drawable/magnifying_glass_blue_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etml_cimav_pharma"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

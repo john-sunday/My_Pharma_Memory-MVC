@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bittersweet"
+    tools:context=".ui.view.mypharmahome.MyPharmaHomeFragment">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_pharma_home_title" />
+
+    <TextView
+        android:id="@+id/tv_my_pharma_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:background="@color/eggplant_light"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/mis_farmacos"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_pharma_home_title">
+
+        <ImageView
+            android:id="@+id/iv_my_pharma_home_blister"
+            android:layout_width="206dp"
+            android:layout_height="278dp"
+            android:layout_marginTop="76dp"
+            android:contentDescription="@string/blister_image"
+            android:src="@drawable/yellow_aspirine"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/iv_my_pharma_home_books"
+            android:layout_width="186dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="76dp"
+            android:contentDescription="@string/books_and_magnifying_glass"
+            android:src="@drawable/books_magnifying_glass"
+            tools:ignore="ImageContrastCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="239dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_16dp" />
+
+        <Button
+            android:id="@+id/btn_my_pharma_home_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/introducir_nuevo_farmaco"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_16dp" />
+
+        <Button
+            android:id="@+id/btn_my_pharma_home_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mostrar_mi_lista_de_farmacos"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_16dp" />
+
+        <Button
+            android:id="@+id/btn_my_pharma_home_searcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/buscar_mi_farmaco"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

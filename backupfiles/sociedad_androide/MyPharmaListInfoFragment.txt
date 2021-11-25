@@ -1,0 +1,21 @@
+    private var _binding: FragmentMyPharmaListInfoBinding? = null
+    private val binding get() = _binding!!
+
+    companion object {
+        fun newInstance() = MyPharmaListInfoFragment()
+    }
+    private lateinit var listViewModel: MyPharmaListInfoViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentMyPharmaListInfoBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        listViewModel = ViewModelProvider(this).get(MyPharmaListInfoViewModel::class.java)
+        // TODO: Use the ViewModel
+    }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "368222476134",
+    "project_id": "my-memory-pharma",
+    "storage_bucket": "my-memory-pharma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368222476134:android:0cc3bc3c2ba4889bd85aa7",
+        "android_client_info": {
+          "package_name": "com.juandomingo.mypharmamemory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368222476134-pl06b6unoe54na6ojeive445ei7vh5c8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvN9TSMiKA5ocgMpnhjR9xpYOUW4M8pjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368222476134-pl06b6unoe54na6ojeive445ei7vh5c8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

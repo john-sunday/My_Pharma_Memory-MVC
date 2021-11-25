@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="eggplant_light">#9F1575</color>
+    <color name="pastel_green">#60ea8a</color>
+
+    <color name="eggplant_principal">#84085F</color>
+    <color name="eggplant_dark">#6D004C</color>
+
+    <color name="forest_green_light">#3DB318</color>
+    <color name="forest_green_principal">#2A9409</color>
+    <color name="forest_green_dark">#1D7A00</color>
+
+    <color name="lucky_light">#D3CC1C</color>
+    <color name="lucky_principal">#AFA80B</color>
+    <color name="lucky_dark">#908B00</color>
+
+    <color name="persian_green_light">#249F9F</color>
+    <color name="bittersweet">#db6060</color>
+
+    <color name="persian_green_principal">#009999</color>
+    <color name="persian_green_dark">#007676</color>
+    <color name="orange_light">#FFBD39</color>
+    <color name="orange_principal">#FFAA00</color>
+    <color name="orange_dark">#C58300</color>
+    <color name="red_light">#FF3939</color>
+    <color name="red_principal">#FF0000</color>
+    <color name="red_dark">#C50000</color>
+</resources>
