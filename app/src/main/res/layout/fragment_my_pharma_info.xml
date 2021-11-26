@@ -1,111 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/bittersweet"
-    tools:context=".ui.view.mypharmainfo.MyPharmaInfoFragment">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tv_mypharma_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/eggplant_light"
-        android:gravity="center"
-        android:padding="@dimen/_20dp"
-        android:text="@string/mi_info_farmaco"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:background="@color/bittersweet"
+        tools:context=".controller.MyPharmaInfoFragment">
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40dp" />
+        <TextView
+            android:id="@+id/tv_mypharma_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eggplant_light"
+            android:gravity="center"
+            android:padding="@dimen/_20dp"
+            android:text="@string/mi_info_farmaco"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv_mypharma_full_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/eggplant_light"
-        android:minHeight="48dp"
-        android:paddingStart="@dimen/_16dp"
-        android:paddingEnd="@dimen/_0dp"
-        android:text="@string/nombre_completo_info"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_20dp" />
+        <TextView
+            android:id="@+id/tv_mypharma_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eggplant_light"
+            android:minHeight="48dp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_0dp"
+            android:text="@string/nombre_completo_info"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tv_mypharma_nat_cod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/eggplant_light"
-        android:paddingStart="@dimen/_16dp"
-        android:paddingEnd="@dimen/_0dp"
-        android:text="@string/codigo_nacional_info"
-        android:textColor="#FFFFFFFF"
-        android:textSize="16sp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_20dp" />
+        <TextView
+            android:id="@+id/tv_mypharma_nat_cod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eggplant_light"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_0dp"
+            android:text="@string/codigo_nacional_info"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tv_mypharma_expiry_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/eggplant_light"
-        android:paddingStart="@dimen/_16dp"
-        android:paddingEnd="@dimen/_0dp"
-        android:text="@string/fecha_de_caducidad_info"
-        android:textColor="#FFFFFFFF"
-        android:textSize="16sp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_20dp" />
+        <TextView
+            android:id="@+id/tv_mypharma_expiry_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eggplant_light"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_0dp"
+            android:text="@string/fecha_de_caducidad_info"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tv_mypharma_route"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/eggplant_light"
-        android:paddingStart="@dimen/_16dp"
-        android:paddingEnd="@dimen/_0dp"
-        android:text="@string/via_info"
-        android:textColor="#FFFFFFFF"
-        android:textSize="16sp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_20dp" />
+        <TextView
+            android:id="@+id/tv_mypharma_route"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/eggplant_light"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_0dp"
+            android:text="@string/via_info"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tv_mypharma_ailments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp" />
 
-        android:background="@color/eggplant_light"
-        android:paddingStart="@dimen/_16dp"
-        android:paddingEnd="@dimen/_0dp"
-        android:text="@string/dolencias_que_trata_info"
-        android:textColor="#FFFFFFFF"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_mypharma_ailments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_20dp" />
+            android:background="@color/eggplant_light"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_0dp"
+            android:text="@string/dolencias_que_trata_info"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_mypharma_ailments"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="@dimen/_40dp"
-        android:paddingTop="@dimen/_8dp"
-        android:paddingEnd="@dimen/_0dp" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp" />
 
-</LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mypharma_ailments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_40dp"
+            android:paddingTop="@dimen/_8dp"
+            android:paddingEnd="@dimen/_0dp" />
+
+    </LinearLayout>
+</ScrollView>

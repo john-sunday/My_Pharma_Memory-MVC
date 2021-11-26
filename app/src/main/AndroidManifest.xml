@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.juandomingo.mypharmamemory" >
+    package="com.juandomingo.mypharmamemorymvc" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MvvmAplication"
+        android:name=".model.Context"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyPharmaMemory2" >
 
         <activity
-            android:name=".ui.view.MainActivity"
+            android:name="com.juandomingo.mypharmamemorymvc.controller.MainActivity"
             android:exported="true"
             android:theme="@style/SplashScreenTheme" >
             <intent-filter>
