@@ -1,161 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:orientation="vertical"
+    android:background="@color/pastel_green"
+    tools:context=".controller.LoginFragment">
 
-    <LinearLayout
 
+
+    <TextView
+        android:id="@+id/tv_log_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/pastel_green"
-        tools:context=".controller.LoginFragment">
+        android:background="@color/eggplant_light"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/mi_recuerda_farmaco"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp" />
 
+    <EditText
+        android:id="@+id/et_log_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_80dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/input_shape"
+        android:cursorVisible="true"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="@dimen/_8dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textWebEmailAddress"
+        android:maxLength="40"
+        android:minHeight="48dp"
+        android:padding="@dimen/_16dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/white"
+        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tv_log_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/eggplant_light"
-            android:gravity="center"
-            android:padding="@dimen/_20dp"
-            android:text="@string/mi_recuerda_farmaco"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_16dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40dp" />
+    <EditText
+        android:id="@+id/et_log_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_80dp"
+        android:autofillHints="password"
+        android:background="@drawable/input_shape"
+        android:cursorVisible="true"
+        android:drawableStart="@drawable/ic_baseline_https_24"
+        android:drawablePadding="@dimen/_8dp"
+        android:ems="10"
+        android:hint="@string/contrasenia"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:minHeight="48dp"
+        android:padding="@dimen/_16dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="@color/white"
+        android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/et_log_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_80dp"
-            android:layout_marginEnd="@dimen/_80dp"
-            android:autofillHints="emailAddress"
-            android:background="@drawable/input_shape"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_baseline_email_24"
-            android:drawablePadding="@dimen/_8dp"
-            android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textWebEmailAddress"
-            android:maxLength="40"
-            android:minHeight="48dp"
-            android:padding="@dimen/_16dp"
-            android:textAlignment="viewStart"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_16dp" />
-
-        <EditText
-            android:id="@+id/et_log_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_80dp"
-            android:layout_marginEnd="@dimen/_80dp"
-            android:autofillHints="password"
-            android:background="@drawable/input_shape"
-            android:cursorVisible="true"
-            android:drawableStart="@drawable/ic_baseline_https_24"
-            android:drawablePadding="@dimen/_8dp"
-            android:ems="10"
-            android:hint="@string/contrasenia"
-            android:inputType="textPassword"
-            android:maxLength="20"
-            android:minHeight="48dp"
-            android:padding="@dimen/_16dp"
-            android:textAlignment="viewStart"
-            android:textColorHint="@color/white"
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_20dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_log_access"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_80dp"
-                android:layout_weight="1"
-                android:text="@string/acceso"
-                android:textColorHint="#FFFFFF"
-                android:textSize="18sp" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_40dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/btn_log_register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_80dp"
-                android:layout_weight="1"
-                android:text="@string/registro"
-                android:textColorHint="#FFFFFF"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_log_google"
-            android:layout_width="match_parent"
-            android:layout_height="99dp"
+            android:id="@+id/btn_log_access"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_80dp"
-            android:layout_marginEnd="@dimen/_80dp"
-            android:drawableLeft="@mipmap/ic_google"
-            android:text="@string/google"
+            android:layout_weight="1"
+            android:text="@string/acceso"
             android:textColorHint="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_20dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40dp"
+            android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btn_log_facebook"
-            android:layout_width="match_parent"
+            android:id="@+id/btn_log_register"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_80dp"
             android:layout_marginEnd="@dimen/_80dp"
-            android:drawableLeft="@mipmap/ic_facebook"
-            android:text="@string/facebook"
+            android:layout_weight="1"
+            android:text="@string/registro"
             android:textColorHint="#FFFFFF"
-            android:textSize="20sp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40dp" />
-
-        <Button
-            android:id="@+id/btn_log_logout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_80dp"
-            android:layout_marginEnd="@dimen/_80dp"
-            android:text="@string/cerrar_sesion"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
-</ScrollView>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp" />
+
+    <Button
+        android:id="@+id/btn_log_google"
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_80dp"
+        android:drawableLeft="@mipmap/ic_google"
+        android:text="@string/google"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20dp" />
+
+    <Button
+        android:id="@+id/btn_log_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_80dp"
+        android:drawableLeft="@mipmap/ic_facebook"
+        android:text="@string/facebook"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp" />
+
+    <Button
+        android:id="@+id/btn_log_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_80dp"
+        android:text="@string/cerrar_sesion"
+        android:textSize="20sp" />
+
+</LinearLayout>

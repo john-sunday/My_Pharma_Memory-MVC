@@ -1,43 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:layout_gravity="bottom">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
+        <ImageView
+            android:id="@+id/iv_apphome_head"
+            android:layout_width="371dp"
+            android:layout_height="223dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="256dp"
+            android:contentDescription="@string/head_and_brain"
+            android:src="@drawable/brain_head"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_apphome_pills"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="ImageContrastCheck" />
 
-                <ImageView
-                    android:id="@+id/iv_apphome_head"
-                    android:layout_width="371dp"
-                    android:layout_height="223dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="256dp"
-                    android:contentDescription="@string/head_and_brain"
-                    android:src="@drawable/brain_head"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/iv_apphome_pills"
-                    app:layout_constraintVertical_bias="1.0"
-                    tools:ignore="ImageContrastCheck" />
+        <ImageView
+            android:id="@+id/iv_apphome_pills"
+            android:layout_width="167dp"
+            android:layout_height="167dp"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="149dp"
+            android:contentDescription="@string/pills"
+            android:src="@drawable/pills"
+            app:layout_constraintStart_toStartOf="@+id/iv_apphome_head"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
-                <ImageView
-                    android:id="@+id/iv_apphome_pills"
-                    android:layout_width="167dp"
-                    android:layout_height="167dp"
-                    android:layout_marginStart="208dp"
-                    android:layout_marginTop="149dp"
-                    android:contentDescription="@string/pills"
-                    android:src="@drawable/pills"
-                    app:layout_constraintStart_toStartOf="@+id/iv_apphome_head"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="ImageContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
 

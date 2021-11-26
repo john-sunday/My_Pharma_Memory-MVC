@@ -3,12 +3,13 @@ package com.juandomingo.mypharmamemorymvc.controller
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.juandomingo.mypharmamemorymvc.R
@@ -22,7 +23,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var toogle: ActionBarDrawerToggle
     // Firebase auth.
     private lateinit var auth: FirebaseAuth
-    private  lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
+    // Navigation Fragments.
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         /*  El establecimiento del tema tiene que ir en primer lugar, para
@@ -46,6 +49,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         supportActionBar?.setHomeButtonEnabled(true)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -109,7 +113,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         return super.onOptionsItemSelected(item)
     }
-    fun setDefaultFragment(){
+    private fun setDefaultFragment(){
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.navHostFragment, LoginFragment())
             commit()
