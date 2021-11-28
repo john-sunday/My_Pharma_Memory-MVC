@@ -9,13 +9,15 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.databinding.ActivityMainBinding
 import com.juandomingo.mypharmamemorymvc.ui.view.about.AboutFragment
-import com.juandomingo.mypharmamemorymvc.ui.view.contact.ContactFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     // Navigation Drawer
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var binding: ActivityMainBinding
     // Navigation Fragments.
     private lateinit var navController: NavController
+    private val code: CodeLectorFragment = CodeLectorFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         /*  El establecimiento del tema tiene que ir en primer lugar, para
@@ -48,8 +51,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         supportActionBar?.setHomeButtonEnabled(true)
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
-
+        // Nagitation Fragments using Navigation Graph.
+        try {
+            val navHostFragment = supportFragmentManager
+                .findFragmentById(R.id.navHostFragment) as NavHostFragment
+            navController = navHostFragment.navController
+        }
+        catch (e: Exception){
+            println("Error $e")
+        }
+        //setupActionBarWithNavController(navController)
     }
+
+    /*override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }*/
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {

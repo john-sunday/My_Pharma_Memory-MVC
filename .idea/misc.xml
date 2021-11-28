@@ -86,6 +86,11 @@
         <entry key="..\:/Users/Admin/androidstudio_projects/pfc/MyPharmaMemory/app/src/main/res/drawable/splashscreen.xml" value="0.1962962962962963" />
         <entry key="..\:/Users/Admin/androidstudio_projects/pfc/MyPharmaMemory/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Admin/androidstudio_projects/pfc/MyPharmaMemory/app/src/main/res/layout/splashscreen.xml" value="0.11388888888888889" />
+        <entry key="..\:/Users/Admin/androidstudio_projects/pfc/my_pharma_memory_mvc/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Admin/androidstudio_projects/pfc/my_pharma_memory_mvc/app/src/main/res/layout/fragment_app_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/Admin/androidstudio_projects/pfc/my_pharma_memory_mvc/app/src/main/res/layout/fragment_code_lector.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/androidstudio_projects/pfc/my_pharma_memory_mvc/app/src/main/res/layout/fragment_lector_pharma_html.xml" value="0.18779342723004694" />
+        <entry key="..\:/Users/Admin/androidstudio_projects/pfc/my_pharma_memory_mvc/app/src/main/res/layout/fragment_login.xml" value="0.19739583333333333" />
       </map>
     </option>
   </component>

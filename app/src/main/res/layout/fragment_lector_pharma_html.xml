@@ -12,10 +12,12 @@
         tools:context=".controller.LectorPharmaHtmlFragment">
 
         <TextView
-            android:id="@+id/tvLector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/screenshot_android_cimav_html" />
+            android:id="@+id/readed_code_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80dp"
+            android:background="@color/bittersweet"
+            android:padding="@dimen/_20dp"
+            android:textSize="30sp" />
 
     </FrameLayout>
 </ScrollView>
