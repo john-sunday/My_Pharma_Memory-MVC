@@ -1,19 +1,19 @@
-package com.juandomingo.mypharmamemorymvc.controller
+package com.juandomingo.mypharmamemorymvc.view
 
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.juandomingo.mypharmamemorymvc.R
+import com.juandomingo.mypharmamemorymvc.controller.AppHomeFragment
+import com.juandomingo.mypharmamemorymvc.controller.MainActivity
 import com.juandomingo.mypharmamemorymvc.databinding.FragmentLoginBinding
 import com.juandomingo.mypharmamemorymvc.model.Context
 import java.util.regex.Pattern
@@ -163,4 +163,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         val transaction = fragmentManager?.beginTransaction()
         transaction?.replace(R.id.navHostFragment, fragment)?.commit()
     }
+
+    // TODO Hide Keyboard !!!!!
+    /*private fun hideKeyboard() {
+        val imm: InputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(binding.loginLayout.windowToken, 0)
+    }*/
 }

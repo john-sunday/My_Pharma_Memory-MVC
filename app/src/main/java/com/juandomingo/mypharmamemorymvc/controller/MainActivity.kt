@@ -9,15 +9,13 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.databinding.ActivityMainBinding
 import com.juandomingo.mypharmamemorymvc.ui.view.about.AboutFragment
+import com.juandomingo.mypharmamemorymvc.view.LoginFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     // Navigation Drawer

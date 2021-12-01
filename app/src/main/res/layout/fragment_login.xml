@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/pastel_green"
-    tools:context=".controller.LoginFragment">
+    android:id="@+id/login_layout"
+    tools:context=".view.LoginFragment">
 
 
 
