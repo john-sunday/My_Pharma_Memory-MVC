@@ -45,7 +45,7 @@ class CodeLectorFragment : Fragment(R.layout.fragment_code_lector) {
             else {
                 Toast.makeText(Context.context, "Código: ${result.contents}", Toast.LENGTH_LONG)
                     .show()
-                val bundle: Bundle = Bundle()
+                val bundle = Bundle()
                 bundle.putString(code, result.contents.toString())
                 //setFragmentResult(requestKey, bundleOf(code to result)) PROBAR SI NO FUNCIONA LA INSTRUCCIÓN DE ABAJO !!!!
                 parentFragmentManager.setFragmentResult(requestKey, bundle)
@@ -58,8 +58,9 @@ class CodeLectorFragment : Fragment(R.layout.fragment_code_lector) {
 
     private fun navigateFromCodeLectorToPharmaHtml() {
         val fragment = LectorPharmaHtmlFragment()
-        val transaction = fragmentManager?.beginTransaction()
+        val transaction = parentFragmentManager?.beginTransaction()
         transaction?.replace(R.id.navHostFragment, fragment)?.commit()
+        //transaction.addToBackStack(null)
     }
 
 
