@@ -1,4 +1,4 @@
-package com.juandomingo.mypharmamemorymvc.view
+package com.juandomingo.mypharmamemorymvc.controller
 
 
 import android.content.Intent
@@ -12,8 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.juandomingo.mypharmamemorymvc.R
-import com.juandomingo.mypharmamemorymvc.controller.AppHomeFragment
-import com.juandomingo.mypharmamemorymvc.controller.MainActivity
 import com.juandomingo.mypharmamemorymvc.databinding.FragmentLoginBinding
 import com.juandomingo.mypharmamemorymvc.model.Context
 import java.util.regex.Pattern

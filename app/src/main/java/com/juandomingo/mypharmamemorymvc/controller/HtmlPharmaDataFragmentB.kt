@@ -1,6 +1,5 @@
 package com.juandomingo.mypharmamemorymvc.controller
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.gson.JsonObject
 import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.model.APIService
 import com.juandomingo.mypharmamemorymvc.model.Context
@@ -16,11 +14,10 @@ import com.juandomingo.mypharmamemorymvc.model.PharmaResponse
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class LectorPharmaHtmlFragmentB: Fragment() {
+class HtmlPharmaDataFragmentB: Fragment() {
     private val requestKey = "REQUEST_KEY"
     private val code = "CODE"
     override fun onCreateView(
@@ -28,7 +25,7 @@ class LectorPharmaHtmlFragmentB: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_lector_pharma_html, container, false)
+        val view = inflater.inflate(R.layout.fragment_html_pharma_data, container, false)
         //return super.onCreateView(inflater, container, savedInstanceState)
         val pharmaNatCode: String? = receiveFullPharmaCode()
         searchByNatCode(pharmaNatCode)

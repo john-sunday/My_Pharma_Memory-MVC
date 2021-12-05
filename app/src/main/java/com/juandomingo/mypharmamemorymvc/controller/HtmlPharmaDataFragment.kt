@@ -4,20 +4,16 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.webkit.WebView
-import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.gson.JsonArray
-import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.juandomingo.mypharmamemorymvc.R
-import com.juandomingo.mypharmamemorymvc.databinding.FragmentLectorPharmaHtmlBinding
+import com.juandomingo.mypharmamemorymvc.databinding.FragmentHtmlPharmaDataBinding
 import com.juandomingo.mypharmamemorymvc.model.APIService
 import com.juandomingo.mypharmamemorymvc.model.Context
-import com.juandomingo.mypharmamemorymvc.model.PharmaResponse
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,8 +21,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class LectorPharmaHtmlFragmentA : Fragment(R.layout.fragment_lector_pharma_html) {
-    private lateinit var binding: FragmentLectorPharmaHtmlBinding
+class HtmlPharmaDataFragment : Fragment(R.layout.fragment_html_pharma_data) {
+    private lateinit var binding: FragmentHtmlPharmaDataBinding
     private val requestKey = "REQUEST_KEY"
     private val code = "CODE"
 
@@ -36,7 +32,7 @@ class LectorPharmaHtmlFragmentA : Fragment(R.layout.fragment_lector_pharma_html)
     private val url: String = "https://cima.aemps.es/cima/rest/medicamento?"
 
     companion object {
-        fun newInstance() = LectorPharmaHtmlFragmentA()
+        fun newInstance() = HtmlPharmaDataFragment()
     }
 
 
@@ -45,7 +41,7 @@ class LectorPharmaHtmlFragmentA : Fragment(R.layout.fragment_lector_pharma_html)
 
         webview_prospect = view.findViewById(R.id.webview_prospect)
 
-        binding = FragmentLectorPharmaHtmlBinding.bind(view)
+        binding = FragmentHtmlPharmaDataBinding.bind(view)
         val bundle = arguments
         val pharmaNatCode: String? = bundle?.getString("CODE")
         val natCode = pharmaNatCode?.let { extractPharmaNationalCode(it) }

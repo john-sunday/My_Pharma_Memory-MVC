@@ -14,9 +14,8 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.databinding.ActivityMainBinding
-import com.juandomingo.mypharmamemorymvc.model.Context
-import com.juandomingo.mypharmamemorymvc.ui.view.about.AboutFragment
-import com.juandomingo.mypharmamemorymvc.view.LoginFragment
+import com.juandomingo.mypharmamemorymvc.view.AboutFragment
+import com.juandomingo.mypharmamemorymvc.view.ContactFragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     // Navigation Drawer
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var binding: ActivityMainBinding
     // Navigation Fragments.
     private lateinit var navController: NavController
-    private val codeA: CodeLectorFragmentA = CodeLectorFragmentA()
+    private val codeA: CodeLectorFragmentB = CodeLectorFragmentB()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         /*  El establecimiento del tema tiene que ir en primer lugar, para
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_item_lector -> {
                 supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.navHostFragment, CodeLectorFragmentB())
+                    replace(R.id.navHostFragment, CodeLectorFragment())
                     commit()
                 }
             }

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/pastel_green"
     android:orientation="vertical"
-    tools:context=".view.LoginFragment">
+    tools:context=".controller.LoginFragment">
 
 
     <TextView
