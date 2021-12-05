@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/codeLectorFragment"
-        android:name="com.juandomingo.mypharmamemorymvc.controller.CodeLectorFragment"
+        android:name="com.juandomingo.mypharmamemorymvc.controller.CodeLectorFragmentA"
         android:label="fragment_code_lector"
         tools:layout="@layout/fragment_code_lector" >
         <action

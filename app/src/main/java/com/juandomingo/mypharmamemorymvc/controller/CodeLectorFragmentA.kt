@@ -4,22 +4,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResult
-import androidx.navigation.fragment.NavHostFragment
 import com.google.zxing.integration.android.IntentIntegrator
 import com.google.zxing.integration.android.IntentResult
 import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.databinding.FragmentCodeLectorBinding
 import com.juandomingo.mypharmamemorymvc.model.Context
 
-class CodeLectorFragment : Fragment(R.layout.fragment_code_lector) {
+class CodeLectorFragmentA : Fragment(R.layout.fragment_code_lector) {
     private lateinit var binding: FragmentCodeLectorBinding
     private val requestKey = "REQUEST_KEY"
     private val code = "CODE"
     companion object {
-        fun newInstance() = CodeLectorFragment()
+        fun newInstance() = CodeLectorFragmentA()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -48,8 +45,9 @@ class CodeLectorFragment : Fragment(R.layout.fragment_code_lector) {
                 val bundle = Bundle()
                 bundle.putString(code, result.contents.toString())
                 //setFragmentResult(requestKey, bundleOf(code to result)) PROBAR SI NO FUNCIONA LA INSTRUCCIÓN DE ABAJO !!!!
-                parentFragmentManager.setFragmentResult(requestKey, bundle)
-                navigateFromCodeLectorToPharmaHtml()
+
+                //parentFragmentManager.setFragmentResult(requestKey, bundle)
+                //navigateFromCodeLectorToPharmaHtml()
                 //NavHostFragment.findNavController(this).navigate(R.id.action_codeLectorFragment_to_pharmaLectorHtmlFragment)
             }
         else
@@ -57,7 +55,7 @@ class CodeLectorFragment : Fragment(R.layout.fragment_code_lector) {
     }
 
     private fun navigateFromCodeLectorToPharmaHtml() {
-        val fragment = LectorPharmaHtmlFragment()
+        val fragment = LectorPharmaHtmlFragmentA()
         val transaction = parentFragmentManager?.beginTransaction()
         transaction?.replace(R.id.navHostFragment, fragment)?.commit()
         //transaction.addToBackStack(null)

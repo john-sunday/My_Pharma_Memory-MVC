@@ -9,6 +9,14 @@
     <FrameLayout
         android:id="@+id/pharma_html_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        tools:ignore="WebViewLayout">
+
+        <WebView
+            android:id="@+id/webview_prospect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
 
 </ScrollView>

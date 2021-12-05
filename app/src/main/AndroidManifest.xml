@@ -11,14 +11,17 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPharmaMemory2"
-        android:hardwareAccelerated="true">
+        android:hardwareAccelerated="true"
+        tools:targetApi="m">
 
         <activity
             android:name="com.juandomingo.mypharmamemorymvc.controller.MainActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashScreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             tools:replace="screenOrientation"/>
     </application>
 

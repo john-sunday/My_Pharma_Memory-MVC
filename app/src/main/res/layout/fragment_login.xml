@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/pastel_green"
-    android:id="@+id/login_layout"
+    android:orientation="vertical"
     tools:context=".view.LoginFragment">
-
 
 
     <TextView
@@ -25,7 +24,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40dp" />
+        android:layout_height="160dp" />
 
     <EditText
         android:id="@+id/et_log_email"
@@ -80,29 +79,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_log_access"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_80dp"
-            android:layout_weight="1"
+            android:maxLines="1"
             android:text="@string/acceso"
             android:textColorHint="#FFFFFF"
             android:textSize="18sp" />
 
         <Space
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_40dp"
-            android:layout_weight="1" />
+            android:layout_width="10dp"
+            android:layout_height="@dimen/_40dp"/>
+
 
         <Button
             android:id="@+id/btn_log_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_80dp"
-            android:layout_weight="1"
+            android:maxLines="1"
             android:text="@string/registro"
             android:textColorHint="#FFFFFF"
             android:textSize="18sp" />
@@ -113,35 +111,6 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_40dp" />
 
-    <Button
-        android:id="@+id/btn_log_google"
-        android:layout_width="match_parent"
-        android:layout_height="99dp"
-        android:layout_marginStart="@dimen/_80dp"
-        android:layout_marginEnd="@dimen/_80dp"
-        android:drawableLeft="@mipmap/ic_google"
-        android:text="@string/google"
-        android:textColorHint="#FFFFFF"
-        android:textSize="20sp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_20dp" />
-
-    <Button
-        android:id="@+id/btn_log_facebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_80dp"
-        android:layout_marginEnd="@dimen/_80dp"
-        android:drawableLeft="@mipmap/ic_facebook"
-        android:text="@string/facebook"
-        android:textColorHint="#FFFFFF"
-        android:textSize="20sp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40dp" />
 
     <Button
         android:id="@+id/btn_log_logout"

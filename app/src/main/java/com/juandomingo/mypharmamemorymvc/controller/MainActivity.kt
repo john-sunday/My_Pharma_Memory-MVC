@@ -14,6 +14,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.databinding.ActivityMainBinding
+import com.juandomingo.mypharmamemorymvc.model.Context
 import com.juandomingo.mypharmamemorymvc.ui.view.about.AboutFragment
 import com.juandomingo.mypharmamemorymvc.view.LoginFragment
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var binding: ActivityMainBinding
     // Navigation Fragments.
     private lateinit var navController: NavController
-    private val code: CodeLectorFragment = CodeLectorFragment()
+    private val codeA: CodeLectorFragmentA = CodeLectorFragmentA()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         /*  El establecimiento del tema tiene que ir en primer lugar, para
@@ -65,12 +66,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return navController.navigateUp() || super.onSupportNavigateUp()
     }*/
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
 
             R.id.nav_item_lector -> {
                 supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.navHostFragment, CodeLectorFragment())
+                    replace(R.id.navHostFragment, CodeLectorFragmentB())
                     commit()
                 }
             }
