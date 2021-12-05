@@ -13,7 +13,7 @@
         tools:ignore="WebViewLayout">
 
         <WebView
-            android:id="@+id/webview_prospect"
+            android:id="@+id/webview_leaflet"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

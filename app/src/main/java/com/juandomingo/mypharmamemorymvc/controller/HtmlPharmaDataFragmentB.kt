@@ -97,7 +97,7 @@ class HtmlPharmaDataFragmentB: Fragment() {
 
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://cima.aemps.es/cima/rest/medicamento")
+            .baseUrl("https://cima.aemps.es/cima/rest/medicamento/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.zxing.integration.android.IntentIntegrator
@@ -14,6 +13,7 @@ import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.model.Context
 
 class CodeLectorFragment: Fragment() {
+    //private lateinit var binding: FragmentCodeLectorBinding
     private val code = "CODE"
     override fun onCreateView(
         inflater: LayoutInflater,

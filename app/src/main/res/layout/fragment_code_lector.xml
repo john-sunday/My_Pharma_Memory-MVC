@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".controller.CodeLectorFragment">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="69dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_baseline_flash_on_24" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="544dp"
+        android:layout_gravity="bottom">
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

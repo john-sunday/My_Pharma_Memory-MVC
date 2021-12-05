@@ -25,72 +25,23 @@ class HtmlPharmaDataFragment : Fragment(R.layout.fragment_html_pharma_data) {
     private lateinit var binding: FragmentHtmlPharmaDataBinding
     private val requestKey = "REQUEST_KEY"
     private val code = "CODE"
-
-    private lateinit var webview_prospect: WebView
-
-    //private lateinit var pharmaNatCode: String
-    private val url: String = "https://cima.aemps.es/cima/rest/medicamento?"
-
-    companion object {
-        fun newInstance() = HtmlPharmaDataFragment()
-    }
-
+    private lateinit var webviewLeaflet: WebView
+    private val url: String = "https://cima.aemps.es/cima/rest/medicamento/"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        webview_prospect = view.findViewById(R.id.webview_prospect)
-
+        webviewLeaflet = view.findViewById(R.id.webview_leaflet)
         binding = FragmentHtmlPharmaDataBinding.bind(view)
         val bundle = arguments
-        val pharmaNatCode: String? = bundle?.getString("CODE")
-        val natCode = pharmaNatCode?.let { extractPharmaNationalCode(it) }
-        Toast.makeText(context, "COD NAT: " + natCode, Toast.LENGTH_SHORT).show()
-        //receiveFullPharmaCode()
+        val pharmaFullCode: String? = bundle?.getString(code)
+        val natCode = pharmaFullCode?.let { extractPharmaNationalCode(it) }
+        //Toast.makeText(context, "COD NAT: $natCode", Toast.LENGTH_SHORT).show()
         searchByNatCode(natCode)
-        // https://cima.aemps.es/cima/rest/medicamento?cn=767491 ejemplo petición para 'Omeprazol STADA cn=767491'
-        // https://cima.aemps.es/cima/rest/medicamento/?cn=767491 -> Funciona con '/?'
+        // Ejemplo petición para 'Omeprazol STADA cn=767491' (funciona con '/?')
+        // https://cima.aemps.es/cima/rest/medicamento/?cn=767491
 
     }
 
-    /*private fun receiveFullPharmaCode(): String {
-
-        var pharmaNatCode: String = ""
-        parentFragmentManager.setFragmentResultListener(
-            requestKey,
-            this
-        ) { requestKey: String, bundle: Bundle ->
-            //if (requestKey == this.requestKey) {
-            val fullCodeValue: String? = bundle.getString(code)
-            //if (fullCodeValue != null) {
-            pharmaNatCode = fullCodeValue?.let {
-                extractPharmaNationalCode(it)
-            }.toString()
-            val chArr: CharArray? = fullCodeValue?.toCharArray()
-            val natCode: CharArray = CharArray(6)
-            var n = 0
-            for (i in 10..15) {
-                chArr?.get(i)?.let {
-                    natCode[n] = it
-                    n++
-                }
-            }
-            // Test.
-            /*var str = ""
-            if (natCode != null) {
-                for (i in natCode.indices) {
-                    str = str.plus(natCode[i].toString())
-                }
-                print(str)
-            } else {
-                Toast.makeText(Context.context, "No se ha podido leer el código", Toast.LENGTH_LONG)
-                    .show()
-            }*/
-        }
-        //}
-        return pharmaNatCode
-    }
-*/
     private fun extractPharmaNationalCode(fullCodeValue: String): String {
         val chArr: CharArray? = fullCodeValue.toCharArray()
         val natCode: CharArray? = CharArray(6)
@@ -119,20 +70,12 @@ class HtmlPharmaDataFragment : Fragment(R.layout.fragment_html_pharma_data) {
             .build()
     }
 
-
     private fun searchByNatCode(query: String?) {
         // Coroutine
         CoroutineScope(Dispatchers.IO).launch {
-            // val call = getRetrofit().create(APIService::class.java).getPharmaByNatCode("?cn=$query")
-            //val pharma: PharmaResponse? = call.body()
-
             val call = getRetrofit().create(APIService::class.java)
-
-            val caller = call.getData("https://cima.aemps.es/cima/rest/medicamento?cn=$query")
-
-
+            val caller = call.getData("$url?cn=$query")
             if (caller.isSuccessful && caller.code() == 200) {
-
                 val body = caller.body()
                 if (body != null) {
                     val obj: JsonObject = body.asJsonObject
@@ -146,7 +89,6 @@ class HtmlPharmaDataFragment : Fragment(R.layout.fragment_html_pharma_data) {
             } else {
                 showError()
             }
-
         }
     }
 
