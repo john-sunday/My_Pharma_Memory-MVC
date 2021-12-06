@@ -1,11 +1,13 @@
 package com.juandomingo.mypharmamemorymvc.controller
 
 
+import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
@@ -23,10 +25,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     // User account Firebase.
     private lateinit var auth: FirebaseAuth
     private val TAG = LoginFragment.javaClass.simpleName
+    private var emailGlobal: String = ""
     companion object {
         fun newInstance() = LoginFragment()
     }
-    
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,14 +38,14 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         login()
         logup()
         logout()
-
     }
-
 
     private fun login() {
         binding.btnLogAccess.setOnClickListener {
+            hideKeyboard()
             val etEmail = binding.etLogEmail.text.toString()
             val etPassword = binding.etLogPassword.text.toString()
+            emailGlobal = etEmail
             if (emailPasswordCheck(etEmail, etPassword)) {
                 auth.signInWithEmailAndPassword(etEmail, etPassword)
                     .addOnCompleteListener { task ->
@@ -51,7 +53,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                             Log.d(TAG, "signInWithEmailAndPassword:success")
                             Toast.makeText(
                                 Context.context,
-                                "Usuario $etEmail iniciando sesión....",
+                                "Usuario ${auth.currentUser?.email} iniciando sesión....",
                                 Toast.LENGTH_LONG
                             ).show()
                             navigateFromLoginToAppHome()
@@ -84,6 +86,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         binding.btnLogRegister.setOnClickListener {
             val etEmail = binding.etLogEmail.text.toString()
             val etPassword = binding.etLogPassword.text.toString()
+            hideKeyboard()
             if (emailPasswordCheck(etEmail, etPassword))
                 createUserAccount(etEmail, etPassword)
         }
@@ -120,7 +123,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 if (task.isSuccessful) {
                     Toast.makeText(
                         Context.context,
-                        "Usuario registrado con éxito",
+                        "Usuario ${auth.currentUser?.email} registrado con éxito",
                         Toast.LENGTH_LONG
                     ).show()
                     // 2ª forma que funciona.
@@ -139,16 +142,21 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun logout() {
         binding.btnLogLogout.setOnClickListener {
-            auth.signOut()
-            val etEmail = binding.etLogEmail.text.toString()
-            binding.etLogEmail.setText("")
-            binding.etLogPassword.setText("")
-            Toast.makeText(
-                Context.context,
-                "Usuario $etEmail cerrando sesión....",
-                Toast.LENGTH_LONG
-            ).show()
-            reload()
+            if (auth.currentUser == null) {
+                Toast.makeText(Context.context, "Ningún usuario inició sesión", Toast.LENGTH_LONG).show()
+            } else {
+                binding.etLogEmail.text.toString()
+                binding.etLogEmail.setText("")
+                binding.etLogPassword.setText("")
+                Toast.makeText(
+                    Context.context,
+                    "Usuario ${auth.currentUser?.email} cerrando sesión....",
+                    Toast.LENGTH_LONG
+                ).show()
+                hideKeyboard()
+                auth.signOut()
+                reload()
+            }
         }
     }
     private fun reload() {
@@ -158,13 +166,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun navigateFromLoginToAppHome(){
         val fragment = AppHomeFragment()
-        val transaction = fragmentManager?.beginTransaction()
-        transaction?.replace(R.id.navHostFragment, fragment)?.commit()
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.navHostFragment, fragment).commit()
     }
 
-    // TODO Hide Keyboard !!!!!
-    /*private fun hideKeyboard() {
-        val imm: InputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+    private fun hideKeyboard() {
+        val imm: InputMethodManager = context?.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(binding.loginLayout.windowToken, 0)
-    }*/
+    }
 }

@@ -20,7 +20,7 @@
             android:background="@color/bittersweet"
             android:gravity="center"
             android:padding="@dimen/_20dp"
-            android:text="@string/mi_lista"
+            android:text="@string/mi_lista_titulo"
             android:textColorHint="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />

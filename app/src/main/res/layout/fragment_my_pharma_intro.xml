@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#71CA62"
+    android:backgroundTint="#84F186"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@color/eggplant_light"
+        android:orientation="vertical"
         tools:context=".controller.MyPharmaIntroFragment">
-
 
 
         <TextView
@@ -22,7 +22,7 @@
             android:background="@color/bittersweet"
             android:gravity="center"
             android:padding="@dimen/_20dp"
-            android:text="@string/mi_intro_farmaco"
+            android:text="@string/mi_intro_farmaco_titulo"
             android:textColorHint="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -35,14 +35,13 @@
             android:id="@+id/et_intro_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Nombre completo del medicamento"
             android:background="@color/bittersweet"
-            android:hint="@string/nombre_completo_del_medicamento"
+            android:hint="@string/nombre_completo"
             android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/nombre_completo"
+
             android:textColorHint="#000000" />
 
         <Space
@@ -53,13 +52,12 @@
             android:id="@+id/et_intro_nat_cod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Código nacional de 6 dígitos"
             android:background="@color/bittersweet"
+            android:hint="@string/codigo_nacional_de_seis_dígitos"
             android:inputType="number"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/codigo_nacional"
             android:textColorHint="#000000" />
 
         <Space
@@ -70,14 +68,14 @@
             android:id="@+id/et_intro_expiry_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Fecha de caducidad"
             android:background="@color/bittersweet"
+            android:hint="@string/fecha_de_caducidad"
             android:inputType="date"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/fecha_de_caducidad"
             android:textColorHint="#000000" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="@dimen/_20dp" />
@@ -86,14 +84,14 @@
             android:id="@+id/et_intro_route"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Forma de administración"
             android:background="@color/bittersweet"
+            android:hint="@string/via_administracion"
             android:inputType="text"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/via_administracion"
             android:textColorHint="#000000" />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="@dimen/_20dp" />
@@ -102,26 +100,38 @@
             android:id="@+id/et_intro_ailments"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="Dolencias que trata el fármaco"
             android:background="@color/bittersweet"
+            android:hint="@string/dolencia_que_trata"
             android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/dolencias_que_trata"
             android:textColorHint="#000000" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="@dimen/_20dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_intro_ailments"
+        <ListView
+            android:id="@+id/lv_ailments"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="@dimen/_40dp"
-            android:paddingTop="@dimen/_8dp"
-            android:paddingEnd="@dimen/_0dp" />
+            android:layout_height="128dp"
+            android:nestedScrollingEnabled="true"/>
 
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20dp" />
+
+        <Button
+            android:id="@+id/btn_pharma_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/pastel_green"
+            android:minHeight="60dp"
+            android:text="@string/introducir_mi_farmaco"
+            android:textColor="#000000"
+            android:textSize="16sp" />
     </LinearLayout>
+
 </ScrollView>

@@ -39,7 +39,6 @@ class HtmlPharmaDataFragment : Fragment(R.layout.fragment_html_pharma_data) {
         searchByNatCode(natCode)
         // Ejemplo petición para 'Omeprazol STADA cn=767491' (funciona con '/?')
         // https://cima.aemps.es/cima/rest/medicamento/?cn=767491
-
     }
 
     private fun extractPharmaNationalCode(fullCodeValue: String): String {

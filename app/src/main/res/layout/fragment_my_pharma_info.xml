@@ -20,7 +20,7 @@
             android:background="@color/eggplant_light"
             android:gravity="center"
             android:padding="@dimen/_20dp"
-            android:text="@string/mi_info_farmaco"
+            android:text="@string/mi_info_farmaco_titulo"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -37,7 +37,7 @@
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/nombre_completo_info"
+            android:text="@string/nombre_completo"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 
@@ -52,7 +52,7 @@
             android:background="@color/eggplant_light"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/codigo_nacional_info"
+            android:text="@string/codigo_nacional_de_seis_dígitos"
             android:textColor="#FFFFFFFF"
             android:textSize="16sp" />
 
@@ -67,7 +67,7 @@
             android:background="@color/eggplant_light"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/fecha_de_caducidad_info"
+            android:text="@string/fecha_de_caducidad"
             android:textColor="#FFFFFFFF"
             android:textSize="16sp" />
 
@@ -82,7 +82,7 @@
             android:background="@color/eggplant_light"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/via_info"
+            android:text="@string/via_administracion"
             android:textColor="#FFFFFFFF"
             android:textSize="16sp" />
 
@@ -98,7 +98,7 @@
             android:background="@color/eggplant_light"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
-            android:text="@string/dolencias_que_trata_info"
+            android:text="@string/dolencia_que_trata"
             android:textColor="#FFFFFFFF"
             android:textSize="16sp" />
 

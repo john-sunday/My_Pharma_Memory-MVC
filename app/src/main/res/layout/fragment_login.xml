@@ -17,21 +17,34 @@
         android:background="@color/eggplant_light"
         android:gravity="center"
         android:padding="@dimen/_20dp"
-        android:text="@string/mi_recuerda_farmaco"
+        android:text="@string/mi_recuerda_farmaco_titulo"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="160dp" />
+        android:layout_height="@dimen/_16dp" />
+
+    <ImageView
+        android:id="@+id/iv_medicines"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:src="@drawable/imageonline_co_transparentimage"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/login_image" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp" />
 
     <EditText
         android:id="@+id/et_log_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_80dp"
-        android:layout_marginEnd="@dimen/_80dp"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/_40dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/input_shape"
         android:cursorVisible="true"
@@ -41,7 +54,6 @@
         android:hint="@string/email"
         android:inputType="textWebEmailAddress"
         android:maxLength="40"
-        android:minHeight="48dp"
         android:padding="@dimen/_16dp"
         android:textAlignment="viewStart"
         android:textColorHint="@color/white"
@@ -55,8 +67,8 @@
         android:id="@+id/et_log_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_80dp"
-        android:layout_marginEnd="@dimen/_80dp"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/_40dp"
         android:autofillHints="password"
         android:background="@drawable/input_shape"
         android:cursorVisible="true"
@@ -66,7 +78,6 @@
         android:hint="@string/contrasenia"
         android:inputType="textPassword"
         android:maxLength="20"
-        android:minHeight="48dp"
         android:padding="@dimen/_16dp"
         android:textAlignment="viewStart"
         android:textColorHint="@color/white"
@@ -80,11 +91,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/_16dp">
 
         <Button
             android:id="@+id/btn_log_access"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:text="@string/acceso"
@@ -98,7 +110,7 @@
 
         <Button
             android:id="@+id/btn_log_register"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:text="@string/registro"
@@ -109,15 +121,15 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40dp" />
+        android:layout_height="@dimen/_8dp" />
 
 
     <Button
         android:id="@+id/btn_log_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_80dp"
-        android:layout_marginEnd="@dimen/_80dp"
+        android:layout_marginStart="@dimen/_40dp"
+        android:layout_marginEnd="@dimen/_40dp"
         android:text="@string/cerrar_sesion"
         android:textSize="20sp" />
 

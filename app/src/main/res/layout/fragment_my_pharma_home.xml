@@ -21,7 +21,7 @@
             android:background="@color/eggplant_light"
             android:gravity="center"
             android:padding="@dimen/_20dp"
-            android:text="@string/mis_farmacos"
+            android:text="@string/mis_farmacos_titulo"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:textSize="20sp"
@@ -30,17 +30,19 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2"
+            android:layout_width="410dp"
+            android:layout_height="311dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_myhome_title">
 
             <ImageView
                 android:id="@+id/iv_myhome_blister"
                 android:layout_width="206dp"
-                android:layout_height="278dp"
+                android:layout_height="200dp"
                 android:layout_marginTop="76dp"
                 android:contentDescription="@string/blister_image"
                 android:src="@drawable/yellow_aspirine"
@@ -49,7 +51,7 @@
             <ImageView
                 android:id="@+id/iv_myhome_books"
                 android:layout_width="186dp"
-                android:layout_height="280dp"
+                android:layout_height="200dp"
                 android:layout_marginTop="76dp"
                 android:contentDescription="@string/books_and_magnifying_glass"
                 android:src="@drawable/books_magnifying_glass"
@@ -57,18 +59,21 @@
 
         </LinearLayout>
 
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="239dp"
-            android:layout_marginBottom="32dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_16dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space"
+            android:padding="@dimen/_20dp">
 
             <Button
                 android:id="@+id/btn_myhome_intro"
@@ -90,24 +95,12 @@
                 android:textColorHint="@color/white"
                 android:textSize="20sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_16dp" />
 
-            <Button
-                android:id="@+id/btn_myhome_searcher"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/buscar_mi_farmaco"
-                android:textColorHint="@color/white"
-                android:textSize="20sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_20dp"
-                android:layout_marginTop="10dp" />
 
         </LinearLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
