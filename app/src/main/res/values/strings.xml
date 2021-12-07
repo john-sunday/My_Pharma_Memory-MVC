@@ -15,7 +15,7 @@
     <string name="mi_busca_farmaco_titulo">MI BUSCA-FÁRMACO</string>
     <string name="magnifying_glass">Magnifying glass</string>
     <string name="mi_info_farmaco_titulo">MI INFO-FÁRMACO</string>
-    <string name="fecha_de_caducidad">Fecha de caducidad</string>
+    <string name="fecha_de_caducidad">Fecha de caducidad (formato aaaa/MM/dd)</string>
     <string name="nombre_completo">Nombre completo</string>
     <string name="codigo_nacional_de_seis_dígitos">Código nacional de seis dígitos</string>
     <string name="via_administracion">Vía de administración</string>
@@ -48,6 +48,6 @@
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
     <string name="flash_image">flash image</string>
-    <string name="introducir_mi_farmaco">Introducir mi fármaco</string>
+    <string name="almacenar_mi_farmaco">Almacenar mi fármaco</string>
     <string name="login_image">Login image</string>
 </resources>

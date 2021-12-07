@@ -25,7 +25,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     // User account Firebase.
     private lateinit var auth: FirebaseAuth
     private val TAG = LoginFragment.javaClass.simpleName
-    private var emailGlobal: String = ""
     companion object {
         fun newInstance() = LoginFragment()
     }
@@ -35,6 +34,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         binding = FragmentLoginBinding.bind(view)
         binding.etLogEmail.requestFocus()
         auth = Firebase.auth
+
         login()
         logup()
         logout()
@@ -43,35 +43,38 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private fun login() {
         binding.btnLogAccess.setOnClickListener {
             hideKeyboard()
-            val etEmail = binding.etLogEmail.text.toString()
-            val etPassword = binding.etLogPassword.text.toString()
-            emailGlobal = etEmail
-            if (emailPasswordCheck(etEmail, etPassword)) {
-                auth.signInWithEmailAndPassword(etEmail, etPassword)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Log.d(TAG, "signInWithEmailAndPassword:success")
-                            Toast.makeText(
-                                Context.context,
-                                "Usuario ${auth.currentUser?.email} iniciando sesión....",
-                                Toast.LENGTH_LONG
-                            ).show()
-                            navigateFromLoginToAppHome()
-                        } else {
-                            Log.w(TAG, "signInWithEmailAndPassword:failure", task.exception)
-                            Toast.makeText(
-                                Context.context,
-                                "Fallo en la autenticación",
-                                Toast.LENGTH_LONG
-                            ).show()
+            if (auth.currentUser == null) {
+                val etEmail = binding.etLogEmail.text.toString()
+                val etPassword = binding.etLogPassword.text.toString()
+                if (emailPasswordCheck(etEmail, etPassword)) {
+                    auth.signInWithEmailAndPassword(etEmail, etPassword)
+                        .addOnCompleteListener { task ->
+                            if (task.isSuccessful) {
+                                Log.d(TAG, "signInWithEmailAndPassword:success")
+                                Toast.makeText(
+                                    Context.context,
+                                    "Usuario ${auth.currentUser?.email} iniciando sesión....",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                                navigateFromLoginToAppHome()
+                            } else {
+                                Log.w(TAG, "signInWithEmailAndPassword:failure", task.exception)
+                                Toast.makeText(
+                                    Context.context,
+                                    "Fallo en la autenticación",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
                         }
-                    }
+                } else {
+                    Toast.makeText(
+                        Context.context,
+                        "Correo o contraseña incorrectos",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
             } else {
-                Toast.makeText(
-                    Context.context,
-                    "Correo o contraseña incorrectos",
-                    Toast.LENGTH_LONG
-                ).show()
+                navigateFromLoginToAppHome()
             }
         }
     }

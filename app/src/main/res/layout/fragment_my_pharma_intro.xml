@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -38,10 +39,11 @@
             android:background="@color/bittersweet"
             android:hint="@string/nombre_completo"
             android:inputType="textMultiLine"
+            android:maxLength="100"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
-            android:paddingEnd="@dimen/_0dp"
 
+            android:paddingEnd="@dimen/_0dp"
             android:textColorHint="#000000" />
 
         <Space
@@ -55,6 +57,7 @@
             android:background="@color/bittersweet"
             android:hint="@string/codigo_nacional_de_seis_dígitos"
             android:inputType="number"
+            android:maxLength="6"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
@@ -87,6 +90,7 @@
             android:background="@color/bittersweet"
             android:hint="@string/via_administracion"
             android:inputType="text"
+            android:maxLength="30"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
@@ -102,26 +106,27 @@
             android:layout_height="wrap_content"
             android:background="@color/bittersweet"
             android:hint="@string/dolencia_que_trata"
-            android:inputType="textMultiLine"
+            android:inputType="textMultiLine|text"
+            android:maxLength="30"
             android:minHeight="48dp"
             android:paddingStart="@dimen/_16dp"
             android:paddingEnd="@dimen/_0dp"
             android:textColorHint="#000000" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_20dp" />
-
-        <ListView
-            android:id="@+id/lv_ailments"
-            android:layout_width="match_parent"
-            android:layout_height="128dp"
-            android:nestedScrollingEnabled="true"/>
-
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_20dp" />
+            android:layout_height="@dimen/_16dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            app:srcCompat="@drawable/paper_box" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_16dp" />
 
         <Button
             android:id="@+id/btn_pharma_intro"
@@ -129,7 +134,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/pastel_green"
             android:minHeight="60dp"
-            android:text="@string/introducir_mi_farmaco"
+            android:text="@string/almacenar_mi_farmaco"
             android:textColor="#000000"
             android:textSize="16sp" />
     </LinearLayout>
