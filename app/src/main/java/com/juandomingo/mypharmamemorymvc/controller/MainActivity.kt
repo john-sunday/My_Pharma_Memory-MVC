@@ -84,12 +84,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     commit()
                 }
             }
-            R.id.nav_item_cima -> {
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.navHostFragment, CimaSearcherFragment())
-                    commit()
-                }
-            }
             R.id.nav_item_logout -> {
                 supportFragmentManager.beginTransaction().apply {
                     replace(R.id.navHostFragment, LoginFragment())

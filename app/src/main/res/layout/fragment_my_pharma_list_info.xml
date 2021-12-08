@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:background="@color/eggplant_light"
+    android:orientation="vertical"
+    tools:context=".controller.MyPharmaListInfoFragment">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tv_mylist_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/eggplant_light"
-        android:orientation="vertical"
-        tools:context=".controller.MyPharmaListInfoFragment">
+        android:background="@color/bittersweet"
+        android:gravity="center"
+        android:padding="@dimen/_20dp"
+        android:text="@string/mi_lista_titulo"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_mylist_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/bittersweet"
-            android:gravity="center"
-            android:padding="@dimen/_20dp"
-            android:text="@string/mi_lista_titulo"
-            android:textColorHint="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40dp"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_mylist_pharmalist"
+        android:layout_width="match_parent"
+        android:layout_height="405dp"
+        android:paddingStart="@dimen/_40dp"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingEnd="@dimen/_0dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_mylist_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="@dimen/_40dp"
-            android:paddingEnd="@dimen/_0dp"
-            android:paddingTop="@dimen/_8dp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_16dp" />
 
-    </LinearLayout>
-</ScrollView>
+<ImageView
+    android:id="@+id/iv_box_list"
+    android:layout_width="match_parent"
+    android:layout_height="138dp"
+    android:contentDescription="@string/inventory_image"
+    app:srcCompat="@drawable/inventory_image_adobespark" />
+
+</LinearLayout>

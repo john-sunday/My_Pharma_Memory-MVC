@@ -119,10 +119,12 @@
             android:layout_height="@dimen/_16dp" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/iv_boxes"
             android:layout_width="match_parent"
             android:layout_height="108dp"
-            app:srcCompat="@drawable/paper_box" />
+            app:srcCompat="@drawable/paper_box"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/boxes_image" />
 
         <Space
             android:layout_width="match_parent"

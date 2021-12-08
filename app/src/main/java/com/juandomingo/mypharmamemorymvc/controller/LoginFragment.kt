@@ -1,6 +1,7 @@
 package com.juandomingo.mypharmamemorymvc.controller
 
 
+import android.app.Activity
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.content.Intent
 import android.os.Bundle
@@ -52,7 +53,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                             if (task.isSuccessful) {
                                 Log.d(TAG, "signInWithEmailAndPassword:success")
                                 Toast.makeText(
-                                    Context.context,
+                                    // ó activity as Activity también.
+                                    activity,
                                     "Usuario ${auth.currentUser?.email} iniciando sesión....",
                                     Toast.LENGTH_LONG
                                 ).show()

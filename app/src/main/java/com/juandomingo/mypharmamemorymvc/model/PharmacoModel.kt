@@ -1,8 +1,9 @@
 package com.juandomingo.mypharmamemorymvc.model
 
 data class PharmacoModel(
-    val fullName: String,
-    val natCode: String,
-    val expiryDate: String,
-    val routeAdmin: String,
-    val ailmentsList: MutableList<String>)
+    // Inicializamos los parámetros para poder construir constructor vacío.
+    val fullName: String = "DEFAULT_NAME",
+    val natCode: Number = 0,
+    val expiryDate: String = "DEFAULT_EXPIRY_DATE",
+    val routeAdmin: String = "DEFAULT_ROUTE_ADMIN",
+    val ailmentsList: MutableList<*> = mutableListOf("DEFAULT_FIRST_VALUE"))

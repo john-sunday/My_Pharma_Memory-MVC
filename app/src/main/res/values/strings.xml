@@ -50,4 +50,6 @@
     <string name="flash_image">flash image</string>
     <string name="almacenar_mi_farmaco">Almacenar mi fármaco</string>
     <string name="login_image">Login image</string>
+    <string name="inventory_image">Inventory image</string>
+    <string name="boxes_image">Boxes image</string>
 </resources>

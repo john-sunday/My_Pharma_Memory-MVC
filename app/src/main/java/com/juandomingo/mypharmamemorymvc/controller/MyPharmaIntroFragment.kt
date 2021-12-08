@@ -36,10 +36,7 @@ class MyPharmaIntroFragment : Fragment(R.layout.fragment_my_pharma_intro) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMyPharmaIntroBinding.bind(view)
-
-        Toast.makeText(Context.context, user?.email, Toast.LENGTH_LONG).show()
-
-
+        //Toast.makeText(Context.context, user?.email, Toast.LENGTH_LONG).show()
         //lvAilments = binding.lvAilments
         //ailmentsList.add(ailment)
         //ailmentsList.toMutableList().add(ailment)
@@ -56,7 +53,7 @@ class MyPharmaIntroFragment : Fragment(R.layout.fragment_my_pharma_intro) {
                 ailmentsList = mutableListOf(ailment)
                 //arrayAdapter = ArrayAdapter(Context.context, android.R.layout.simple_list_item_1, ailmentsList)
                 //lvAilments.adapter = arrayAdapter
-                val pharma = PharmacoModel(fullName, natCode, expiryDateStr, adminRoute, ailmentsList)
+                //val pharma = PharmacoModel(fullName, natCode.toInt(), expiryDateStr, adminRoute, ailmentsList)
 
                 val pharmaHash = hashMapOf(
                     "Nombre completo" to fullName,
