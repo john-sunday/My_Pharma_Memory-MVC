@@ -27,9 +27,6 @@
             android:id="@+id/action_appHomeFragment_to_myPharmaHomeFragment"
             app:destination="@id/myPharmaHomeFragment" />
         <action
-            android:id="@+id/action_appHomeFragment_to_searcherCimavFragment"
-            app:destination="@id/searcherCimavFragment" />
-        <action
             android:id="@+id/action_appHomeFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
@@ -61,9 +58,6 @@
         <action
             android:id="@+id/action_myPharmaHomeFragment_to_infoMyListPharmaFragment"
             app:destination="@id/infoMyListPharmaFragment" />
-        <action
-            android:id="@+id/action_myPharmaHomeFragment_to_searcherMyPharmaFragment"
-            app:destination="@id/searcherMyPharmaFragment" />
     </fragment>
 
     <fragment
@@ -90,42 +84,13 @@
     </fragment>
 
     <fragment
-        android:id="@+id/searcherMyPharmaFragment"
-        android:name="com.juandomingo.mypharmamemorymvc.controller.MyPharmaSearcherFragment"
-        android:label="fragment_searcher_my_pharma"
-        tools:layout="@layout/fragment_my_pharma_searcher" >
-        <action
-            android:id="@+id/action_searcherMyPharmaFragment_to_myPharmaHomeFragment"
-            app:destination="@id/myPharmaHomeFragment" />
-        <action
-            android:id="@+id/action_searcherMyPharmaFragment_to_infoMyPharmaFragment"
-            app:destination="@id/infoMyPharmaFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/infoMyPharmaFragment"
         android:name="com.juandomingo.mypharmamemorymvc.controller.MyPharmaInfoFragment"
         android:label="fragment_info_my_pharma"
         tools:layout="@layout/fragment_my_pharma_info" >
         <action
-            android:id="@+id/action_infoMyPharmaFragment_to_searcherMyPharmaFragment"
-            app:destination="@id/searcherMyPharmaFragment" />
-        <action
             android:id="@+id/action_infoMyPharmaFragment_to_infoMyListPharmaFragment"
             app:destination="@id/infoMyListPharmaFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/searcherCimavFragment"
-        android:name="com.juandomingo.mypharmamemorymvc.controller.CimaSearcherFragment"
-        android:label="fragment_searcher_cimav"
-        tools:layout="@layout/fragment_cima_searcher" >
-        <action
-            android:id="@+id/action_searcherCimavFragment_to_appHomeFragment"
-            app:destination="@id/appHomeFragment" />
-        <action
-            android:id="@+id/action_searcherCimavFragment_to_pharmaCimavHtmlFragment"
-            app:destination="@id/pharmaCimavHtmlFragment" />
     </fragment>
 
     <fragment
@@ -136,16 +101,6 @@
         <action
             android:id="@+id/action_pharmaLectorHtmlFragment_to_codeLectorFragment"
             app:destination="@id/codeLectorFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/pharmaCimavHtmlFragment"
-        android:name="com.juandomingo.mypharmamemorymvc.controller.CimaPharmaHtmlFragment"
-        android:label="fragment_pharma_cimav_html"
-        tools:layout="@layout/fragment_html_cima_pharma_data" >
-        <action
-            android:id="@+id/action_pharmaCimavHtmlFragment_to_searcherCimavFragment"
-            app:destination="@id/searcherCimavFragment" />
     </fragment>
 
 </navigation>

@@ -13,7 +13,6 @@ import com.juandomingo.mypharmamemorymvc.R
 import com.juandomingo.mypharmamemorymvc.model.Context
 
 class CodeLectorFragment: Fragment() {
-    //private lateinit var binding: FragmentCodeLectorBinding
     private val code = "CODE"
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +20,6 @@ class CodeLectorFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_code_lector, container, false)
-        //return super.onCreateView(inflater, container, savedInstanceState)
         initScanner()
         return view
     }
@@ -59,5 +57,7 @@ class CodeLectorFragment: Fragment() {
         transaction.replace(R.id.navHostFragment, fragment).commit()
         transaction.addToBackStack(null)
     }
+
+
 
 }

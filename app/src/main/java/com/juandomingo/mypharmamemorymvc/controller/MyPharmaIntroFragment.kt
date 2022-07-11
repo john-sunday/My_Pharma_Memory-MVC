@@ -25,8 +25,6 @@ class MyPharmaIntroFragment : Fragment(R.layout.fragment_my_pharma_intro) {
     private lateinit var adminRoute: String
     private lateinit var ailment: String
     private lateinit var ailmentsList: MutableList<String>
-    //private lateinit var lvAilments: ListView
-    //private lateinit var arrayAdapter: ArrayAdapter<*>
     private lateinit var btnPharmaIntro: Button
     private val database = FirebaseFirestore.getInstance()
     private val user = Firebase.auth.currentUser
@@ -36,10 +34,6 @@ class MyPharmaIntroFragment : Fragment(R.layout.fragment_my_pharma_intro) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMyPharmaIntroBinding.bind(view)
-        //Toast.makeText(Context.context, user?.email, Toast.LENGTH_LONG).show()
-        //lvAilments = binding.lvAilments
-        //ailmentsList.add(ailment)
-        //ailmentsList.toMutableList().add(ailment)
         btnPharmaIntro = binding.btnPharmaIntro
         val userEmail = user?.email.toString()
 
@@ -51,10 +45,6 @@ class MyPharmaIntroFragment : Fragment(R.layout.fragment_my_pharma_intro) {
             ailment = binding.etIntroAilments.text.toString()
             if (checkFields()){
                 ailmentsList = mutableListOf(ailment)
-                //arrayAdapter = ArrayAdapter(Context.context, android.R.layout.simple_list_item_1, ailmentsList)
-                //lvAilments.adapter = arrayAdapter
-                //val pharma = PharmacoModel(fullName, natCode.toInt(), expiryDateStr, adminRoute, ailmentsList)
-
                 val pharmaHash = hashMapOf(
                     "Nombre completo" to fullName,
                     "Código nacional" to natCode.toInt(),

@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var binding: ActivityMainBinding
     // Navigation Fragments.
     private lateinit var navController: NavController
-    private val codeA: CodeLectorFragmentB = CodeLectorFragmentB()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         /*  El establecimiento del tema tiene que ir en primer lugar, para
@@ -90,18 +89,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     commit()
                 }
             }
-            R.id.nav_item_about -> {
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.navHostFragment, AboutFragment())
-                    commit()
-                }
-            }
-            R.id.nav_item_contact -> {
-                supportFragmentManager.beginTransaction().apply {
-                    replace(R.id.navHostFragment, ContactFragment())
-                    commit()
-                }
-            }
+
         }
         // Escondemos panel de navegación después de pulsar opción
         drawer.closeDrawer(GravityCompat.START)

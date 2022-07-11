@@ -1,0 +1,15 @@
+        <item android:id="@+id/nav_item_cima"
+            android:icon="@drawable/ic_baseline_find_in_page_24"
+            android:title="@string/cima"/>    
+
+<item android:title="@string/startup">
+        <menu>
+            <item android:id="@+id/nav_item_about"
+                android:icon="@drawable/ic_baseline_business_24"
+                android:title="@string/acerca"/>
+            <item android:id="@+id/nav_item_contact"
+                android:icon="@drawable/ic_baseline_email_24"
+                android:title="@string/contacto">
+            </item>
+        </menu>
+    </item>
